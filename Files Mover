@@ -1,0 +1,16 @@
+from tkinter.filedialog import askdirectory
+import os, shutil
+# PROGRAM BY MOSSES ROSS
+
+if not os.path.exists("C:\\Users\\Again Me\\Desktop\\Files"):
+    os.makedirs("C:\\Users\\helpd\\Again Me\\Files")
+
+path = askdirectory()
+list_of_dir = os.listdir(path)
+
+for i in list_of_dir:
+    file_name = os.path.join(path,i)
+    if file_name in path:
+        pass
+    else:
+        shutil.move(file_name, "C:\\Users\\Again Me\\Desktop\\Files")
