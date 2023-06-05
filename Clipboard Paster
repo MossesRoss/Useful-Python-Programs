@@ -1,0 +1,15 @@
+import clipboard
+import time
+#A Mosses's Idea
+
+last_data = clipboard.paste()
+
+while True:
+    data = clipboard.paste()
+    
+    if data != last_data:
+        with open("test.txt" , "a") as file:
+            file.write(data) 
+        last_data = data
+        
+    time.sleep(1)
