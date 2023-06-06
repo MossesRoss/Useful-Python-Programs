@@ -1,0 +1,21 @@
+import numpy as np
+from scipy.optimize import curve_fit
+import matplotlib.pyplot as plt
+
+def curve(x, a, b, c):
+    return a * np.exp(-(x - b)**2 / (2 * c**2))
+
+
+x = np.linspace(0, 10, 100)
+y = curve(x, 2, 5, 1) + np.random.normal(0, 0.2, len(x))  # Add some noise
+
+params, _ = curve_fit(curve, x, y)
+
+a_fit, b_fit, c_fit = params
+
+plt.scatter(x, y, label='Data')
+plt.plot(x, curve(x, a_fit, b_fit, c_fit), 'r-', label='Fit')
+plt.legend()
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
