@@ -1,0 +1,18 @@
+from pulp import *
+
+problem = LpProblem("Optimization Problem", LpMinimize)
+
+x = LpVariable("x", lowBound=0)
+y = LpVariable("y", lowBound=0)
+
+problem += 2*x + 3*y
+
+# Constraints
+problem += 4*x + 3*y >= 10
+problem += x + y >= 5
+problem.solve()
+
+print("Optimal Solution is: ")
+print("x =", value(x))
+print("y =", value(y))
+print("Objective =", value(problem.objective))
