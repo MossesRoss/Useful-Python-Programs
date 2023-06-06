@@ -1,6 +1,6 @@
+#A Mosses's Idea
 import clipboard
 import time
-#A Mosses's Idea
 
 last_data = clipboard.paste()
 
