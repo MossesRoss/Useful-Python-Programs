@@ -1,5 +1,7 @@
-import numpy as np
-from scipy.optimize import curve_fit
+#Ceates noisy data points based on a mathematical curve, fits a curve to the data, and visualizes the original data and the fitted curve using matplotlib.import numpy as np
+from scipy.optimize 
+
+import curve_fit
 import matplotlib.pyplot as plt
 
 def curve(x, a, b, c):
