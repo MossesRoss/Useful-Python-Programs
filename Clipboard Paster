@@ -1,4 +1,5 @@
-#A Mosses's Idea
+# Continuously checks the contents of the clipboard. If the clipboard content changes, it appends the new data to a file named "test.txt" every second.
+
 import clipboard
 import time
 
