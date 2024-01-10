@@ -1,3 +1,5 @@
+#Finds and moves duplicate files in a selected folder to a "Duplicates" folder. It uses MD5 hash values for identification. The Tkinter library is used for folder selection.
+
 from tkinter import Tk
 from tkinter.filedialog import askdirectory
 import os, shutil, hashlib
